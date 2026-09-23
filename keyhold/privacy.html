@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Keyhold privacy policy</title>
+<link rel="icon" href="icon.svg">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<main>
+<header><img src="icon.svg" alt=""><a href="./">Keyhold</a></header>
+
+<h1>Privacy policy</h1>
+<p>Effective 23 September 2026.</p>
+
+<h2>In short</h2>
+<p>Keyhold keeps your data on your own devices and, if you turn on sync, in your own Google Drive. The author of Keyhold never receives, sees or stores any of it. There is no Keyhold server, no account, no analytics and no advertising.</p>
+
+<h2>What Keyhold stores</h2>
+<ul>
+<li><strong>Your vault</strong> — logins, two-factor secrets, notes and files you add or watch. It is one file on your computer, encrypted with AES-256-GCM. The key is protected by Windows and, if you set one, by your master password.</li>
+<li><strong>Backups</strong> — copies of the same encrypted file in folders you choose.</li>
+<li><strong>Settings</strong> — the folders to back up, the folders to watch and the pairing token of the browser extension, kept on your computer.</li>
+</ul>
+
+<h2>The browser extension</h2>
+<p>The extension reads login forms on the page you are on to fill them and to offer saving a new login. It sends this only to the Keyhold app on the same computer (address 127.0.0.1) and to nothing else.</p>
+
+<h2>Google Drive sync (optional)</h2>
+<p>If you connect Google Drive, Keyhold asks for one permission: <code>drive.file</code>. It lets Keyhold see and change only the files Keyhold itself created — a folder named “Keyhold” with your vault file. Keyhold cannot see any other file in your Drive.</p>
+<ul>
+<li>Keyhold uploads the vault file already encrypted on your device, so Google stores data it cannot read.</li>
+<li>The Google access token stays on your device. The author has no access to your Google account or your Drive.</li>
+<li>Data received from Google is used only to keep your own vault in sync between your devices. It is not shared with anyone, not sold, not used for advertising and not used to train any AI model.</li>
+</ul>
+<p>Keyhold’s use and transfer of information received from Google APIs adheres to the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including the Limited Use requirements.</p>
+
+<h2>Removing your data</h2>
+<ul>
+<li>Disconnect Google Drive in Keyhold, or remove Keyhold’s access at <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>.</li>
+<li>Delete the “Keyhold” folder from your Drive.</li>
+<li>Uninstall Keyhold and delete its folder in <code>%APPDATA%</code> and your backup folders.</li>
+</ul>
+
+<h2>Changes and contact</h2>
+<p>Changes to this policy are published on this page. Questions: <a href="https://github.com/Galusz/keyhold/issues">github.com/Galusz/keyhold/issues</a>.</p>
+
+<footer><a href="./">Keyhold</a><a href="https://github.com/Galusz/keyhold">Source code</a></footer>
+</main>
+</body>
+</html>
