@@ -25,7 +25,7 @@
 </ul>
 
 <h2>The browser extension</h2>
-<p>The extension reads login forms on the page you are on to fill them and to offer saving a new login. It sends this only to the Keyhold app on the same computer (address 127.0.0.1) and to nothing else.</p>
+<p>The extension reads login forms on the page you are on to fill them and to save a new login. It sends this only to the Keyhold app on the same computer (address 127.0.0.1) and to nothing else. On a two-step login it keeps the username from the first page in the browser’s memory for up to 10 minutes, so it can be saved together with the password; it is gone when the tab is closed. The pairing token that connects the extension to Keyhold is stored in the browser.</p>
 
 <h2>Google Drive sync (optional)</h2>
 <p>If you connect Google Drive, Keyhold asks for one permission: <code>drive.file</code>. It lets Keyhold see and change only the files Keyhold itself created — a folder named “Keyhold” with your vault file. Keyhold cannot see any other file in your Drive.</p>
