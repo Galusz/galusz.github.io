@@ -12,26 +12,42 @@
 <header><img src="icon.svg" alt=""><a href="./">Keyhold</a></header>
 
 <h1>Privacy policy</h1>
-<p>Effective 23 September 2026.</p>
+<p>Effective 24 September 2026.</p>
 
 <h2>In short</h2>
-<p>Keyhold keeps your data on your own devices and, if you turn on sync, in your own Google Drive. The author of Keyhold never receives, sees or stores any of it. There is no Keyhold server, no account, no analytics and no advertising.</p>
+<p>Keyhold keeps your data on your own devices and, if you turn on sync, in your own Google Drive. The author of Keyhold never receives, sees or stores any of it. There is no Keyhold server, no account, no analytics and no advertising. How the data is protected is described in <a href="security.html">How Keyhold protects your data</a>.</p>
 
 <h2>What Keyhold stores</h2>
 <ul>
-<li><strong>Your vault</strong> — logins, two-factor secrets, notes and files you add or watch. It is one file on your computer, encrypted with AES-256-GCM. The key is protected by Windows and, if you set one, by your master password.</li>
-<li><strong>Backups</strong> — copies of the same encrypted file in folders you choose.</li>
-<li><strong>Settings</strong> — the folders to back up, the folders to watch and the pairing token of the browser extension, kept on your computer.</li>
+<li><strong>Your vault</strong> — logins, two-factor keys, notes and files you add or watch. It is one file on your device, encrypted with AES-256-GCM.</li>
+<li><strong>Backups</strong> — copies of the same encrypted file in folders you choose, and optionally on a server of your own.</li>
+<li><strong>Settings</strong> — the folders to back up and to watch, the sites where the browser extension should not save logins, and the pairing token of the browser extension, kept on your device.</li>
+<li><strong>Site icons</strong> — the small icons of the sites and devices in your vault, kept next to the vault so they do not have to be fetched again.</li>
 </ul>
 
+<h2>Site icons</h2>
+<p>To show a site’s icon, Keyhold asks that site (or the device on your home network) for it directly, the way a browser does when you open the site. No cookies and no data from your vault are sent with the request. Keyhold never uses a third-party icon service, which would learn every site you have an account on.</p>
+
 <h2>The browser extension</h2>
-<p>The extension reads login forms on the page you are on to fill them and to save a new login. It sends this only to the Keyhold app on the same computer (address 127.0.0.1) and to nothing else. On a two-step login it keeps the username from the first page in the browser’s memory for up to 10 minutes, so it can be saved together with the password; it is gone when the tab is closed. The pairing token that connects the extension to Keyhold is stored in the browser.</p>
+<ul>
+<li>The extension reads login forms on the page you are on, to fill them and to offer saving a new login.</li>
+<li>With the Keyhold app on the same computer, it sends this only to that app (address <code>127.0.0.1</code>) and to nothing else. A login you type in is held in the app’s memory for two minutes until you confirm it; nothing is saved before that.</li>
+<li>On a computer without the app, the extension can open your vault from your Google Drive itself (see below). The vault key then stays in the browser’s memory until you lock it or close the browser; the encrypted vault file and the site icons are kept in the browser’s storage for the extension only.</li>
+<li>On a two-step login it keeps the username from the first page in the browser’s memory for up to 10 minutes, so it can be saved together with the password; it is gone when the tab is closed.</li>
+</ul>
+
+<h2>The Android app</h2>
+<ul>
+<li>The vault on the phone is sealed with a key held in the Android Keystore.</li>
+<li>If you choose Keyhold as the phone’s password filler, Android shows Keyhold the login fields of the app or web page you tap, so it can offer your logins and codes. A new login is saved only when you agree to Android’s “Save to Keyhold?” question.</li>
+<li>The camera is used only while you scan a two-factor QR code; the picture never leaves the phone.</li>
+</ul>
 
 <h2>Google Drive sync (optional)</h2>
-<p>If you connect Google Drive, Keyhold asks for one permission: <code>drive.file</code>. It lets Keyhold see and change only the files Keyhold itself created — a folder named “Keyhold” with your vault file. Keyhold cannot see any other file in your Drive.</p>
+<p>If you connect Google Drive — in the app, on the phone or in the extension — Keyhold asks for one permission: <code>drive.file</code>. It lets Keyhold see and change only the files Keyhold itself created — a folder named “Keyhold” with your vault file. Keyhold cannot see any other file in your Drive.</p>
 <ul>
 <li>Keyhold uploads the vault file already encrypted on your device, so Google stores data it cannot read.</li>
-<li>The Google access token stays on your device. The author has no access to your Google account or your Drive.</li>
+<li>The Google access token stays on your device or in your browser. The author has no access to your Google account or your Drive.</li>
 <li>Data received from Google is used only to keep your own vault in sync between your devices. It is not shared with anyone, not sold, not used for advertising and not used to train any AI model.</li>
 </ul>
 <p>Keyhold’s use and transfer of information received from Google APIs adheres to the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including the Limited Use requirements.</p>
@@ -40,13 +56,13 @@
 <ul>
 <li>Disconnect Google Drive in Keyhold, or remove Keyhold’s access at <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>.</li>
 <li>Delete the “Keyhold” folder from your Drive.</li>
-<li>Uninstall Keyhold and delete its folder in <code>%APPDATA%</code> and your backup folders.</li>
+<li>Uninstall Keyhold and delete its folder in <code>%APPDATA%</code> and your backup folders. On Android, uninstalling the app removes everything it kept. Removing the browser extension removes what it kept in the browser.</li>
 </ul>
 
 <h2>Changes and contact</h2>
 <p>Changes to this policy are published on this page. Questions: <a href="https://github.com/Galusz/keyhold/issues">github.com/Galusz/keyhold/issues</a>.</p>
 
-<footer><a href="./">Keyhold</a><a href="https://github.com/Galusz/keyhold">Source code</a></footer>
+<footer><a href="./">Keyhold</a><a href="security.html">Security</a><a href="https://github.com/Galusz/keyhold">Source code</a></footer>
 </main>
 </body>
 </html>

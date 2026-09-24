@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How Keyhold protects your data</title>
+<meta name="description" content="How Keyhold encrypts the vault, what the master password is for, and what it does and does not protect against.">
+<link rel="icon" href="icon.svg">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<main>
+<header><img src="icon.svg" alt=""><a href="./">Keyhold</a></header>
+
+<h1>How Keyhold protects your data</h1>
+<p>Plainly, including what it cannot protect against. The source code is open on <a href="https://github.com/Galusz/keyhold">GitHub</a>, so all of this can be checked.</p>
+
+<h2>One encrypted file</h2>
+<p>Everything — logins, two-factor keys, notes and files — lives in one file, encrypted with <strong>AES-256-GCM</strong> under a random 256-bit vault key. The file is useless without that key: a backup copy, a lost disk or the copy in your Google Drive shows nothing but random bytes.</p>
+
+<h2>Where the vault key is kept</h2>
+<ul>
+<li><strong>On Windows</strong> the vault key is sealed with <strong>DPAPI</strong>, bound to your Windows account. Keyhold opens without asking for a password once you are signed in to Windows — a deliberate choice, so it is simple enough for anyone to use every day.</li>
+<li><strong>On Android</strong> it is sealed by a key held in the phone’s <strong>Android Keystore</strong>, which never leaves the phone’s secure hardware.</li>
+<li><strong>The master password</strong> wraps the same vault key a second time, with <strong>Argon2id</strong> (64 MiB of memory, 3 passes), which makes guessing slow and expensive. It is needed only where DPAPI or the Keystore do not apply: a new device joining the vault, and the browser extension opening the vault from Google Drive on a computer without the Keyhold app. The master password itself is never stored anywhere.</li>
+</ul>
+
+<h2>No server</h2>
+<p>There is no Keyhold server and no account. Sync goes through your own Google Drive, where Keyhold can see only its own “Keyhold” folder, and the file arrives there already encrypted. The author of Keyhold never receives your data, your password or your Google access.</p>
+
+<h2>The browser extension</h2>
+<ul>
+<li>A web page never gets more than the one login you pick for it; the rest of the vault stays out of its reach.</li>
+<li>With the Keyhold app on the same computer, the extension talks only to it, at <code>127.0.0.1</code>, and every call carries the pairing token shown in the app.</li>
+<li>Without the app, the extension downloads the encrypted vault from your Drive and opens it with your master password. The vault key then stays in the browser’s memory until you lock it or close the browser — the same way other password managers’ extensions work.</li>
+<li>A login you type in is held only in memory for two minutes until you confirm it; nothing is written before that.</li>
+</ul>
+
+<h2>What Keyhold cannot protect against</h2>
+<ul>
+<li><strong>Someone using your unlocked Windows account</strong> can open Keyhold, just as they can open your browser with its saved passwords. Lock your computer when you leave it.</li>
+<li><strong>Malware running on your computer or phone</strong> can read what you can read. No password manager can prevent that; keep the system updated.</li>
+<li><strong>A forgotten master password</strong> cannot be recovered by anyone. Devices that already have the vault keep working; a new device cannot join without it.</li>
+</ul>
+
+<footer><a href="./">Keyhold</a><a href="privacy.html">Privacy policy</a><a href="https://github.com/Galusz/keyhold">Source code</a></footer>
+</main>
+</body>
+</html>
