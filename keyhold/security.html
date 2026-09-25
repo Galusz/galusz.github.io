@@ -20,27 +20,31 @@
 
 <h2>Where the vault key is kept</h2>
 <ul>
-<li><strong>On Windows</strong> the vault key is sealed with <strong>DPAPI</strong>, bound to your Windows account. Keyhold opens without asking for a password once you are signed in to Windows — a deliberate choice, so it is simple enough for anyone to use every day.</li>
-<li><strong>On Android</strong> it is sealed by a key held in the phone’s <strong>Android Keystore</strong>, which never leaves the phone’s secure hardware.</li>
-<li><strong>The master password</strong> wraps the same vault key a second time, with <strong>Argon2id</strong> (64 MiB of memory, 3 passes), which makes guessing slow and expensive. It is needed only where DPAPI or the Keystore do not apply: a new device joining the vault, and the browser extension opening the vault from Google Drive on a computer without the Keyhold app. The master password itself is never stored anywhere.</li>
+<li><strong>On Windows</strong> the vault key is sealed with <strong>DPAPI</strong>, bound to your Windows account. Keyhold opens without asking for a password once you are signed in to Windows — a deliberate choice, so it is simple enough for anyone to use every day. If you want more, turn on <strong>Windows Hello</strong>: Keyhold then asks for your face, fingerprint or Windows PIN when it opens, and locks after 5 minutes without use.</li>
+<li><strong>On Android</strong> it is sealed by a key held in the phone’s <strong>Android Keystore</strong>, which never leaves the phone’s secure hardware. With the fingerprint lock on, Keyhold opens only after your fingerprint (or the phone’s PIN), and its screens cannot be captured in screenshots.</li>
+<li><strong>The master password</strong> wraps the same vault key a second time, with <strong>Argon2id</strong> (64 MiB of memory, 3 passes), which makes guessing slow and expensive. Every vault has one, set when the vault is made. It is needed where DPAPI or the Keystore do not apply: another device opening the vault, and the browser extension opening it from Google Drive on a computer without the Keyhold app. The master password itself is never stored anywhere.</li>
+<li><strong>The recovery key</strong> — 160 random bits — wraps the vault key a third time, for a forgotten master password. Keyhold prints two of its three rows on a recovery sheet; the third is copied onto it by hand and checked, so the printout alone opens nothing.</li>
 </ul>
+
+<h2>Fingerprint and Windows Hello for single entries</h2>
+<p>Any login or code can be marked to ask for its owner: it is then filled in, typed or copied only after a fingerprint on the phone or Windows Hello on the computer. A device with neither asks for the master password instead. The fingerprint and the face never reach Keyhold — the phone and Windows check them and only say yes or no.</p>
 
 <h2>No server</h2>
 <p>There is no Keyhold server and no account. Sync goes through your own Google Drive, where Keyhold can see only its own “Keyhold” folder, and the file arrives there already encrypted. The author of Keyhold never receives your data, your password or your Google access.</p>
 
 <h2>The browser extension</h2>
 <ul>
-<li>A web page never gets more than the one login you pick for it; the rest of the vault stays out of its reach.</li>
+<li>A web page never gets more than the one login you pick for it, and only a login kept for exactly that site; the rest of the vault stays out of its reach. A page cannot hide Keyhold’s list to make you pick from it unseen.</li>
 <li>With the Keyhold app on the same computer, the extension talks only to it, at <code>127.0.0.1</code>, and every call carries the pairing token shown in the app.</li>
-<li>Without the app, the extension downloads the encrypted vault from your Drive and opens it with your master password. The vault key then stays in the browser’s memory until you lock it or close the browser — the same way other password managers’ extensions work.</li>
+<li>Without the app, the extension downloads the encrypted vault from your Drive and opens it with your master password. The vault key then stays in the browser’s memory until you lock it, close the browser or leave it for 30 minutes — the same way other password managers’ extensions work.</li>
 <li>A login you type in is held only in memory for two minutes until you confirm it; nothing is written before that.</li>
 </ul>
 
 <h2>What Keyhold cannot protect against</h2>
 <ul>
-<li><strong>Someone using your unlocked Windows account</strong> can open Keyhold, just as they can open your browser with its saved passwords. Lock your computer when you leave it.</li>
+<li><strong>Someone using your unlocked Windows account</strong> can open Keyhold unless you turned on Windows Hello, just as they can open your browser with its saved passwords. Lock your computer when you leave it.</li>
 <li><strong>Malware running on your computer or phone</strong> can read what you can read. No password manager can prevent that; keep the system updated.</li>
-<li><strong>A forgotten master password</strong> cannot be recovered by anyone. Devices that already have the vault keep working; a new device cannot join without it.</li>
+<li><strong>A forgotten master password and a lost recovery key</strong> cannot be recovered by anyone — there is no back door. Devices that already have the vault keep working; another device cannot open it without one of the two.</li>
 </ul>
 
 <footer><a href="./">Keyhold</a><a href="privacy.html">Privacy policy</a><a href="https://github.com/Galusz/keyhold">Source code</a></footer>

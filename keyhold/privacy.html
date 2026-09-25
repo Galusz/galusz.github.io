@@ -12,7 +12,7 @@
 <header><img src="icon.svg" alt=""><a href="./">Keyhold</a></header>
 
 <h1>Privacy policy</h1>
-<p>Effective 24 September 2026.</p>
+<p>Effective 25 September 2026.</p>
 
 <h2>In short</h2>
 <p>Keyhold keeps your data on your own devices and, if you turn on sync, in your own Google Drive. The author of Keyhold never receives, sees or stores any of it. There is no Keyhold server, no account, no analytics and no advertising. How the data is protected is described in <a href="security.html">How Keyhold protects your data</a>.</p>
@@ -21,7 +21,7 @@
 <ul>
 <li><strong>Your vault</strong> — logins, two-factor keys, notes and files you add or watch. It is one file on your device, encrypted with AES-256-GCM.</li>
 <li><strong>Backups</strong> — copies of the same encrypted file in folders you choose, and optionally on a server of your own.</li>
-<li><strong>Settings</strong> — the folders to back up and to watch, the sites where the browser extension should not save logins, and the pairing token of the browser extension, kept on your device.</li>
+<li><strong>Settings</strong> — the folders to back up and to watch, the time and any errors of the last backup, whether Keyhold opens with a fingerprint or Windows Hello, the sites where the browser extension should not save logins, and the pairing token of the browser extension, kept on your device.</li>
 <li><strong>Site icons</strong> — the small icons of the sites and devices in your vault, kept next to the vault so they do not have to be fetched again.</li>
 </ul>
 
@@ -32,8 +32,8 @@
 <ul>
 <li>The extension reads login forms on the page you are on, to fill them and to offer saving a new login.</li>
 <li>With the Keyhold app on the same computer, it sends this only to that app (address <code>127.0.0.1</code>) and to nothing else. A login you type in is held in the app’s memory for two minutes until you confirm it; nothing is saved before that.</li>
-<li>On a computer without the app, the extension can open your vault from your Google Drive itself (see below). The vault key then stays in the browser’s memory until you lock it or close the browser; the encrypted vault file and the site icons are kept in the browser’s storage for the extension only.</li>
-<li>On a two-step login it keeps the username from the first page in the browser’s memory for up to 10 minutes, so it can be saved together with the password; it is gone when the tab is closed.</li>
+<li>On a computer without the app, the extension can open your vault from your Google Drive itself (see below). The vault key then stays in the browser’s memory until you lock it, close the browser or leave it for 30 minutes; the encrypted vault file and the site icons are kept in the browser’s storage for the extension only.</li>
+<li>On a two-step login it keeps the username from the first page in the browser’s memory for up to 10 minutes, so it can be saved together with the password on the same site; it is gone when the tab is closed.</li>
 </ul>
 
 <h2>The Android app</h2>
@@ -41,6 +41,7 @@
 <li>The vault on the phone is sealed with a key held in the Android Keystore.</li>
 <li>If you choose Keyhold as the phone’s password filler, Android shows Keyhold the login fields of the app or web page you tap, so it can offer your logins and codes. A new login is saved only when you agree to Android’s “Save to Keyhold?” question.</li>
 <li>The camera is used only while you scan a two-factor QR code; the picture never leaves the phone.</li>
+<li>Your fingerprint and the phone’s PIN are checked by Android, and Windows Hello by Windows; Keyhold only learns whether it was you.</li>
 </ul>
 
 <h2>Google Drive sync (optional)</h2>
