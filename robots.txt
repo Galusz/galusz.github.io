@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://galusz.github.io/sitemap.xml

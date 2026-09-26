@@ -3,17 +3,68 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Keyhold</title>
-<meta name="description" content="Keyhold keeps your passwords, two-factor codes and important files in one encrypted file that backs itself up — on Windows, Android and in the browser.">
+<title>Keyhold — free password manager and 2FA authenticator for Windows, Android and your browser</title>
+<meta name="description" content="Keyhold is a free, open-source password manager and two-factor authenticator in one encrypted vault. Fills logins in Chrome, Edge and Firefox, works on Windows and Android, backs itself up — no account, no cloud of ours.">
+<link rel="canonical" href="https://galusz.github.io/keyhold/">
 <link rel="icon" href="icon.svg">
 <link rel="stylesheet" href="/style.css">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Keyhold">
+<meta property="og:title" content="Keyhold — free password manager and 2FA authenticator">
+<meta property="og:description" content="Passwords, two-factor codes and important files in one encrypted vault that backs itself up. Windows, Android, Chrome, Edge and Firefox. No account, no server.">
+<meta property="og:url" content="https://galusz.github.io/keyhold/">
+<meta property="og:image" content="https://galusz.github.io/keyhold/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://galusz.github.io/keyhold/og.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Keyhold",
+  "applicationCategory": "SecurityApplication",
+  "operatingSystem": "Windows 10, Windows 11, Android",
+  "softwareVersion": "1.2.0",
+  "description": "Free, open-source password manager and two-factor authenticator in one encrypted vault, with a browser extension for Chrome, Edge and Firefox.",
+  "url": "https://galusz.github.io/keyhold/",
+  "downloadUrl": "https://github.com/Galusz/keyhold/releases/latest",
+  "image": "https://galusz.github.io/keyhold/og.png",
+  "screenshot": "https://galusz.github.io/keyhold/screenshot-login.png",
+  "license": "https://opensource.org/licenses/MIT",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+  "author": { "@type": "Person", "name": "Wojciech Gałuszewski", "url": "https://github.com/Galusz" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "Is Keyhold free?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Keyhold is free and open source under the MIT license, with no subscription, no ads and no account." } },
+    { "@type": "Question", "name": "Where are my passwords stored?", "acceptedAnswer": { "@type": "Answer", "text": "In one encrypted file on your own devices, and — if you turn it on — in your own Google Drive, already encrypted. There is no Keyhold server; nobody but you can open the vault." } },
+    { "@type": "Question", "name": "What if I forget the master password?", "acceptedAnswer": { "@type": "Answer", "text": "Keyhold prints a recovery sheet when you make the vault. Its recovery key opens the vault and lets you choose a new master password." } },
+    { "@type": "Question", "name": "Can Keyhold replace Google Authenticator?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. It keeps two-factor codes (TOTP) on the phone and the computer, reads QR codes including the Google Authenticator export, and imports from Aegis, 2FAS, andOTP and FreeOTP+." } },
+    { "@type": "Question", "name": "How is Keyhold different from KeePass?", "acceptedAnswer": { "@type": "Answer", "text": "Same idea — one vault, one master password, no cloud of ours — plus built-in two-factor codes, filling in the browser and in Android apps, and automatic backups. It imports KeePass files." } },
+    { "@type": "Question", "name": "Does it work without the internet?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. The vault lives on your device and works offline; backups go to folders you choose or your own server. Google Drive sync is optional." } }
+  ]
+}
+</script>
 </head>
 <body>
 <main>
 <header><img src="icon.svg" alt=""><a href="./">Keyhold</a></header>
 
-<h1>Everything that matters, in one file that backs itself up.</h1>
-<p>Keyhold is a password manager and authenticator for Windows and Android. Passwords, two-factor codes and important files such as SSH keys and recovery codes live together in one encrypted file, kept in step between your devices through your own Google Drive.</p>
+<h1>Free password manager and 2FA authenticator, in one vault that backs itself up.</h1>
+<p>Keyhold keeps your passwords, two-factor codes and important files such as recovery codes and SSH keys in one encrypted vault. It fills logins right under the field in Chrome, Edge and Firefox and in Android apps, and keeps your devices in step through your own Google Drive. No account, no subscription, no server of ours.</p>
+
+<div class="buttons">
+<a class="btn" href="https://github.com/Galusz/keyhold/releases/latest">Download for Windows</a>
+<a class="btn secondary" href="https://github.com/Galusz/keyhold/releases/latest">Download for Android (APK)</a>
+</div>
+<p class="small">Free and open source (MIT). The browser extension for Chrome, Edge and Firefox comes with the Windows download.</p>
+
+<figure class="shot"><img src="screenshot-login.png" width="1280" height="800" alt="Keyhold's list of logins right under a sign-in field in the browser"><figcaption>Logins right under the field — pick one and it is filled in.</figcaption></figure>
 
 <div class="card"><h3>One vault, one master password</h3><p>Like KeePass: the master password opens the vault, and a printable recovery key opens it if the password is ever forgotten. Several vaults can live side by side, each with its own password.</p></div>
 <div class="card"><h3>Passwords and two-factor codes</h3><p>Keeps logins and two-factor codes, like Google Authenticator, and shows the next code in the last seconds. Pin a code to a login or a site and it is offered right where it is needed. Types logins and codes into any window with Ctrl+Alt+K.</p></div>
@@ -24,8 +75,18 @@
 <div class="card"><h3>Backups</h3><p>Every change is copied to the folders you choose and optionally to a server of your own, in seven copies from the latest to one about a year old — and, if you turn it on, to your own Google Drive.</p></div>
 <div class="card"><h3>Import and QR codes</h3><p>Brings in logins and codes from browsers, Bitwarden, 1Password, KeePass, LastPass, Proton Pass, Aegis, 2FAS and others, and reads two-factor QR codes from the screen, an image or the phone’s camera, including the Google Authenticator export.</p></div>
 
+<figure class="shot"><img src="screenshot-code.png" width="1280" height="800" alt="A two-factor code with its countdown offered under a code field" loading="lazy"><figcaption>Two-factor codes with a countdown, one click to fill.</figcaption></figure>
+
 <h2>Private by design</h2>
 <p>The vault is encrypted with AES-256 on your device. Nothing is sent to the author — there is no Keyhold server, no account and no tracking. Read <a href="security.html">how Keyhold protects your data</a> and the <a href="privacy.html">privacy policy</a>.</p>
+
+<h2>Questions</h2>
+<details><summary>Is Keyhold free?</summary><p>Yes. Keyhold is free and open source under the MIT license, with no subscription, no ads and no account.</p></details>
+<details><summary>Where are my passwords stored?</summary><p>In one encrypted file on your own devices, and — if you turn it on — in your own Google Drive, already encrypted. There is no Keyhold server; nobody but you can open the vault.</p></details>
+<details><summary>What if I forget the master password?</summary><p>Keyhold prints a recovery sheet when you make the vault. Its recovery key opens the vault and lets you choose a new master password.</p></details>
+<details><summary>Can Keyhold replace Google Authenticator?</summary><p>Yes. It keeps two-factor codes (TOTP) on the phone and the computer, reads QR codes including the Google Authenticator export, and imports from Aegis, 2FAS, andOTP and FreeOTP+.</p></details>
+<details><summary>How is Keyhold different from KeePass?</summary><p>Same idea — one vault, one master password, no cloud of ours — plus built-in two-factor codes, filling in the browser and in Android apps, and automatic backups. It imports KeePass files.</p></details>
+<details><summary>Does it work without the internet?</summary><p>Yes. The vault lives on your device and works offline; backups go to folders you choose or your own server. Google Drive sync is optional.</p></details>
 
 <footer><a href="security.html">Security</a><a href="privacy.html">Privacy policy</a><a href="https://github.com/Galusz/keyhold">Source code</a><a href="https://github.com/Galusz/keyhold/issues">Contact</a></footer>
 </main>
