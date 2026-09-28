@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Back up Google Authenticator codes — Keyhold</title>
+<meta name="description" content="Move your Google Authenticator codes into Keyhold in one scan and keep an encrypted copy in your own Google Drive, so a lost phone does not lock you out of your accounts.">
+<link rel="canonical" href="https://galusz.github.io/keyhold/google-authenticator-backup.html">
+<link rel="alternate" hreflang="en" href="https://galusz.github.io/keyhold/google-authenticator-backup.html">
+<link rel="alternate" hreflang="pl" href="https://galusz.github.io/keyhold/pl/kopia-google-authenticator.html">
+<link rel="alternate" hreflang="x-default" href="https://galusz.github.io/keyhold/google-authenticator-backup.html">
+<link rel="icon" href="icon.svg">
+<link rel="stylesheet" href="/style.css">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Keyhold">
+<meta property="og:title" content="Back up your Google Authenticator codes">
+<meta property="og:description" content="Move your Google Authenticator codes into Keyhold in one scan and keep an encrypted copy in your own Google Drive, so a lost phone does not lock you out of your accounts.">
+<meta property="og:url" content="https://galusz.github.io/keyhold/google-authenticator-backup.html">
+<meta property="og:image" content="https://galusz.github.io/keyhold/og.png">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+<body>
+<main>
+<header><img src="icon.svg" alt=""><a href="">Keyhold</a></header>
+
+<h1>Back up your Google Authenticator codes</h1>
+<p>If the phone with your authenticator is lost or broken, the codes go with it — and every account with two-step login stays locked until you recover it, one by one. Keyhold keeps the same codes in an encrypted vault, with a copy in your own Google Drive.</p>
+
+<h2>Move the codes</h2>
+<ol>
+<li><strong>Install Keyhold</strong> — on Android from Google Play, on Windows from GitHub — and create a vault with a master password. Print the recovery sheet.</li>
+<li><strong>In Google Authenticator</strong> open the menu → <em>Transfer accounts</em> → <em>Export accounts</em>, pick the accounts and continue. It shows one or more QR codes.</li>
+<li><strong>Scan them with Keyhold.</strong> Keyhold cannot point a camera at the screen of its own phone, so use a second device: Keyhold on another phone (<em>+</em> → <em>Scan a QR code</em> → <em>Scan with the camera</em>), or Keyhold on your computer with a photo of the QR code (<em>Open an image</em>). Google Authenticator may not allow screenshots of that screen.</li>
+<li><strong>Choose <em>Save all</em>.</strong> Every account becomes its own code in the vault.</li>
+</ol>
+<p>The codes keep working in Google Authenticator too — exporting switches nothing off. Remove them there only when you are ready.</p>
+
+<h2>Keep the backup</h2>
+<ul>
+<li><strong>Google Drive:</strong> turn it on in Keyhold's settings. The vault is encrypted on the device before it is sent, in a visible folder named Keyhold, and Keyhold can reach only the files it made itself.</li>
+<li><strong>Folders or your own server:</strong> every change can also be copied there, in seven copies from the latest to one about a year old.</li>
+<li><strong>The recovery key</strong> on the printed sheet opens the vault even if the master password is forgotten.</li>
+</ul>
+
+<h2>Other authenticators</h2>
+<p>Keyhold also imports from Aegis, 2FAS, andOTP and FreeOTP+. Microsoft Authenticator cannot export its codes — turn two-step login off and on again on each site and scan the new code into Keyhold.</p>
+
+<div class="buttons">
+<a class="btn" href="https://github.com/Galusz/keyhold/releases/latest">Download for Windows</a>
+<a class="btn secondary" href="https://play.google.com/store/apps/details?id=pl.zkv.keyhold">Get it on Google Play</a>
+</div>
+
+<h2>More guides</h2>
+<ul><li><a href="2fa-codes-on-windows.html">Two-factor codes on your Windows PC</a></li><li><a href="keepass-with-2fa.html">Like KeePass, with two-factor codes built in</a></li></ul>
+<p class="small"><a href="pl/kopia-google-authenticator.html" hreflang="pl">Po polsku</a></p>
+
+<footer><a href="security.html">Security</a><a href="privacy.html">Privacy policy</a><a href="https://github.com/Galusz/keyhold">Source code</a><a href="https://github.com/Galusz/keyhold/issues">Contact</a></footer>
+</main>
+</body>
+</html>

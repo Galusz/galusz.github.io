@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A KeePass-style password vault with 2FA codes built in — Keyhold</title>
+<meta name="description" content="Keyhold keeps the KeePass idea — one vault, one master password, no cloud of ours — and adds two-factor codes, filling in the browser and Android apps, and automatic backups. It opens KeePass .kdbx files.">
+<link rel="canonical" href="https://galusz.github.io/keyhold/keepass-with-2fa.html">
+<link rel="alternate" hreflang="en" href="https://galusz.github.io/keyhold/keepass-with-2fa.html">
+<link rel="alternate" hreflang="pl" href="https://galusz.github.io/keyhold/pl/keepass-z-kodami-2fa.html">
+<link rel="alternate" hreflang="x-default" href="https://galusz.github.io/keyhold/keepass-with-2fa.html">
+<link rel="icon" href="icon.svg">
+<link rel="stylesheet" href="/style.css">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Keyhold">
+<meta property="og:title" content="Like KeePass, with two-factor codes built in">
+<meta property="og:description" content="Keyhold keeps the KeePass idea — one vault, one master password, no cloud of ours — and adds two-factor codes, filling in the browser and Android apps, and automatic backups. It opens KeePass .kdbx files.">
+<meta property="og:url" content="https://galusz.github.io/keyhold/keepass-with-2fa.html">
+<meta property="og:image" content="https://galusz.github.io/keyhold/og.png">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+<body>
+<main>
+<header><img src="icon.svg" alt=""><a href="">Keyhold</a></header>
+
+<h1>Like KeePass, with two-factor codes built in</h1>
+<p>KeePass got the basics right: your passwords sit in one encrypted file that only your master password opens, and nobody else keeps a copy. Keyhold works the same way and adds what most people now need on top of it.</p>
+
+<h2>The same idea</h2>
+<ul>
+<li>One vault, one master password. Several vaults can live side by side, each with its own password.</li>
+<li>The file is yours: on your devices, in folders you choose and, if you turn it on, in your own Google Drive — already encrypted.</li>
+<li>Free and open source, no account, no Keyhold server.</li>
+</ul>
+
+<h2>Built in</h2>
+<ul>
+<li>Two-factor codes (TOTP) with a countdown and the next code in the last seconds.</li>
+<li>Logins and codes offered right under the field in Chrome, Edge and Firefox and in Android apps; new logins are offered for saving.</li>
+<li>Fingerprint on the phone or Windows Hello on the computer for the entries you mark.</li>
+<li>A printable recovery key that opens the vault if the master password is ever forgotten.</li>
+<li>Automatic backups in seven copies, from the latest to one about a year old.</li>
+<li>Phone and computer kept in step through your own Google Drive.</li>
+</ul>
+
+<h2>Bring your KeePass database</h2>
+<p>Choose <em>Import</em>, pick your <code>.kdbx</code> file (KDBX 3.1 or 4) and type its master password. Logins and groups come along, and so do two-factor codes saved by KeePassXC, KeePass 2.47 and later, or the common TOTP plugins. Your KeePass file stays as it was.</p>
+
+<div class="buttons">
+<a class="btn" href="https://github.com/Galusz/keyhold/releases/latest">Download for Windows</a>
+<a class="btn secondary" href="https://play.google.com/store/apps/details?id=pl.zkv.keyhold">Get it on Google Play</a>
+</div>
+
+<h2>More guides</h2>
+<ul><li><a href="2fa-codes-on-windows.html">Two-factor codes on your Windows PC</a></li><li><a href="google-authenticator-backup.html">Back up your Google Authenticator codes</a></li></ul>
+<p class="small"><a href="pl/keepass-z-kodami-2fa.html" hreflang="pl">Po polsku</a></p>
+
+<footer><a href="security.html">Security</a><a href="privacy.html">Privacy policy</a><a href="https://github.com/Galusz/keyhold">Source code</a><a href="https://github.com/Galusz/keyhold/issues">Contact</a></footer>
+</main>
+</body>
+</html>

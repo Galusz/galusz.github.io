@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kody 2FA na komputerze z Windows — Keyhold</title>
+<meta name="description" content="Kody weryfikacji dwuetapowej na komputerze z Windows: zeskanuj kod QR z ekranu, wpisuj kody skrótem Ctrl+Alt+K, uzupełniaj je w Chrome, Edge i Firefox i trzymaj w zgodzie z telefonem.">
+<link rel="canonical" href="https://galusz.github.io/keyhold/pl/kody-2fa-na-komputerze.html">
+<link rel="alternate" hreflang="en" href="https://galusz.github.io/keyhold/2fa-codes-on-windows.html">
+<link rel="alternate" hreflang="pl" href="https://galusz.github.io/keyhold/pl/kody-2fa-na-komputerze.html">
+<link rel="alternate" hreflang="x-default" href="https://galusz.github.io/keyhold/2fa-codes-on-windows.html">
+<link rel="icon" href="../icon.svg">
+<link rel="stylesheet" href="/style.css">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Keyhold">
+<meta property="og:title" content="Kody 2FA na komputerze z Windows">
+<meta property="og:description" content="Kody weryfikacji dwuetapowej na komputerze z Windows: zeskanuj kod QR z ekranu, wpisuj kody skrótem Ctrl+Alt+K, uzupełniaj je w Chrome, Edge i Firefox i trzymaj w zgodzie z telefonem.">
+<meta property="og:url" content="https://galusz.github.io/keyhold/pl/kody-2fa-na-komputerze.html">
+<meta property="og:image" content="https://galusz.github.io/keyhold/og.png">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+<body>
+<main>
+<header><img src="../icon.svg" alt=""><a href="../">Keyhold</a></header>
+
+<h1>Kody 2FA na komputerze z Windows</h1>
+<p>Większość aplikacji do kodów działa tylko na telefonie, więc przy każdym logowaniu trzeba po niego sięgać. Keyhold działa też na Windows: sześciocyfrowy kod jest tam, gdzie się logujesz, i zgadza się z telefonem przez Twój własny Google Drive.</p>
+
+<h2>Jak zacząć</h2>
+<ol>
+<li><strong>Pobierz Keyhold na Windows</strong>, rozpakuj w dowolnym miejscu i uruchom <code>keyhold.exe</code>. Bez instalatora i bez zakładania konta.</li>
+<li><strong>Załóż sejf.</strong> Wybierz hasło główne i wydrukuj kartę ratunkową — jej klucz otworzy sejf, gdyby hasło wypadło z głowy.</li>
+<li><strong>Dodaj kod.</strong> Gdy strona pokazuje kod QR do weryfikacji dwuetapowej, wybierz <em>Dodaj kody weryfikacyjne</em> → <em>Skanuj ekran</em>. Zrzut ekranu albo zdjęcie kodu też zadziała (<em>Otwórz obraz</em>).</li>
+<li><strong>Masz kody w Google Authenticator?</strong> Wyeksportuj je tam i przenieś wszystkie naraz — zobacz, <a href="kopia-google-authenticator.html">jak przenieść kody z Google Authenticator i zrobić ich kopię</a>.</li>
+</ol>
+
+<h2>Korzystanie z kodów</h2>
+<ul>
+<li>Każdy kod ma odliczanie, a w ostatnich sekundach widać też następny.</li>
+<li><strong>Ctrl+Alt+K</strong> wpisuje login albo kod w dowolnym oknie.</li>
+<li>Rozszerzenie do Chrome, Edge i Firefox (jest w paczce do pobrania) podpowiada kod tuż pod polem na kod — tylko na stronie, do której należy.</li>
+<li>Oznacz kod jako chroniony, a wpisze się dopiero po Windows Hello.</li>
+</ul>
+
+<h2>Także na telefonie</h2>
+<p>Keyhold na Androida pokazuje te same kody i wpisuje je w aplikacjach. Włącz Google Drive na obu urządzeniach, a będą zgodne; sejf jest szyfrowany na urządzeniu, zanim zostanie wysłany, a Keyhold widzi tylko pliki, które sam założył. Drive jest opcjonalny — Keyhold działa też bez internetu.</p>
+
+<div class="buttons">
+<a class="btn" href="https://github.com/Galusz/keyhold/releases/latest">Pobierz na Windows</a>
+<a class="btn secondary" href="https://play.google.com/store/apps/details?id=pl.zkv.keyhold">Pobierz z Google Play</a>
+</div>
+
+<h2>Inne poradniki</h2>
+<ul><li><a href="kopia-google-authenticator.html">Kopia kodów z Google Authenticator</a></li><li><a href="keepass-z-kodami-2fa.html">Jak KeePass, tylko z kodami 2FA</a></li></ul>
+<p class="small"><a href="../2fa-codes-on-windows.html" hreflang="en">In English</a></p>
+
+<footer><a href="../security.html">Bezpieczeństwo (EN)</a><a href="../privacy.html">Polityka prywatności (EN)</a><a href="https://github.com/Galusz/keyhold">Kod źródłowy</a><a href="https://github.com/Galusz/keyhold/issues">Kontakt</a></footer>
+</main>
+</body>
+</html>

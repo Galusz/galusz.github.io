@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sejf na hasła jak KeePass, z kodami 2FA — Keyhold</title>
+<meta name="description" content="Keyhold działa jak KeePass — jeden sejf, jedno hasło główne, bez naszej chmury — i dodaje kody 2FA, uzupełnianie w przeglądarce i aplikacjach na Androida oraz automatyczne kopie. Otwiera pliki .kdbx.">
+<link rel="canonical" href="https://galusz.github.io/keyhold/pl/keepass-z-kodami-2fa.html">
+<link rel="alternate" hreflang="en" href="https://galusz.github.io/keyhold/keepass-with-2fa.html">
+<link rel="alternate" hreflang="pl" href="https://galusz.github.io/keyhold/pl/keepass-z-kodami-2fa.html">
+<link rel="alternate" hreflang="x-default" href="https://galusz.github.io/keyhold/keepass-with-2fa.html">
+<link rel="icon" href="../icon.svg">
+<link rel="stylesheet" href="/style.css">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Keyhold">
+<meta property="og:title" content="Jak KeePass, tylko z kodami 2FA">
+<meta property="og:description" content="Keyhold działa jak KeePass — jeden sejf, jedno hasło główne, bez naszej chmury — i dodaje kody 2FA, uzupełnianie w przeglądarce i aplikacjach na Androida oraz automatyczne kopie. Otwiera pliki .kdbx.">
+<meta property="og:url" content="https://galusz.github.io/keyhold/pl/keepass-z-kodami-2fa.html">
+<meta property="og:image" content="https://galusz.github.io/keyhold/og.png">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+<body>
+<main>
+<header><img src="../icon.svg" alt=""><a href="../">Keyhold</a></header>
+
+<h1>Jak KeePass, tylko z kodami 2FA</h1>
+<p>KeePass dobrze postawił podstawy: hasła leżą w jednym zaszyfrowanym pliku, który otwiera tylko Twoje hasło główne, i nikt inny nie trzyma jego kopii. Keyhold działa tak samo i dokłada to, czego dziś potrzebuje większość ludzi.</p>
+
+<h2>Ta sama idea</h2>
+<ul>
+<li>Jeden sejf, jedno hasło główne. Może być kilka sejfów obok siebie, każdy z własnym hasłem.</li>
+<li>Plik należy do Ciebie: na Twoich urządzeniach, w wybranych folderach i — jeśli włączysz — na Twoim Google Drive, już zaszyfrowany.</li>
+<li>Darmowy i otwarty, bez konta, bez serwera Keyhold.</li>
+</ul>
+
+<h2>W środku</h2>
+<ul>
+<li>Kody 2FA (TOTP) z odliczaniem i następnym kodem w ostatnich sekundach.</li>
+<li>Loginy i kody tuż pod polem w Chrome, Edge i Firefox oraz w aplikacjach na Androida; nowe loginy Keyhold proponuje zapisać.</li>
+<li>Odcisk palca na telefonie albo Windows Hello na komputerze dla wpisów, które oznaczysz.</li>
+<li>Klucz ratunkowy do wydruku, który otworzy sejf, gdy hasło główne wypadnie z głowy.</li>
+<li>Automatyczne kopie w siedmiu wersjach, od najnowszej do sprzed mniej więcej roku.</li>
+<li>Telefon i komputer zgodne przez Twój własny Google Drive.</li>
+</ul>
+
+<h2>Przenieś bazę z KeePassa</h2>
+<p>Wybierz <em>Importuj</em>, wskaż plik <code>.kdbx</code> (KDBX 3.1 lub 4) i wpisz jego hasło główne. Przejdą loginy i grupy, a także kody 2FA zapisane przez KeePassXC, KeePass 2.47 i nowsze albo popularne wtyczki TOTP. Twój plik KeePassa zostaje bez zmian.</p>
+
+<div class="buttons">
+<a class="btn" href="https://github.com/Galusz/keyhold/releases/latest">Pobierz na Windows</a>
+<a class="btn secondary" href="https://play.google.com/store/apps/details?id=pl.zkv.keyhold">Pobierz z Google Play</a>
+</div>
+
+<h2>Inne poradniki</h2>
+<ul><li><a href="kody-2fa-na-komputerze.html">Kody 2FA na komputerze z Windows</a></li><li><a href="kopia-google-authenticator.html">Kopia kodów z Google Authenticator</a></li></ul>
+<p class="small"><a href="../keepass-with-2fa.html" hreflang="en">In English</a></p>
+
+<footer><a href="../security.html">Bezpieczeństwo (EN)</a><a href="../privacy.html">Polityka prywatności (EN)</a><a href="https://github.com/Galusz/keyhold">Kod źródłowy</a><a href="https://github.com/Galusz/keyhold/issues">Kontakt</a></footer>
+</main>
+</body>
+</html>

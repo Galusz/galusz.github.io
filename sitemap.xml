@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://galusz.github.io/</loc><lastmod>2026-09-26</lastmod></url>
-  <url><loc>https://galusz.github.io/keyhold/</loc><lastmod>2026-09-27</lastmod></url>
+  <url><loc>https://galusz.github.io/keyhold/</loc><lastmod>2026-09-28</lastmod></url>
   <url><loc>https://galusz.github.io/keyhold/security.html</loc><lastmod>2026-09-26</lastmod></url>
   <url><loc>https://galusz.github.io/keyhold/privacy.html</loc><lastmod>2026-09-26</lastmod></url>
+  <url><loc>https://galusz.github.io/keyhold/2fa-codes-on-windows.html</loc><lastmod>2026-09-28</lastmod></url>
+  <url><loc>https://galusz.github.io/keyhold/google-authenticator-backup.html</loc><lastmod>2026-09-28</lastmod></url>
+  <url><loc>https://galusz.github.io/keyhold/keepass-with-2fa.html</loc><lastmod>2026-09-28</lastmod></url>
+  <url><loc>https://galusz.github.io/keyhold/pl/kody-2fa-na-komputerze.html</loc><lastmod>2026-09-28</lastmod></url>
+  <url><loc>https://galusz.github.io/keyhold/pl/kopia-google-authenticator.html</loc><lastmod>2026-09-28</lastmod></url>
+  <url><loc>https://galusz.github.io/keyhold/pl/keepass-z-kodami-2fa.html</loc><lastmod>2026-09-28</lastmod></url>
 </urlset>

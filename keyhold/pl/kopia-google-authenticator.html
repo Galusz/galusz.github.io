@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kopia kodów z Google Authenticator — Keyhold</title>
+<meta name="description" content="Przenieś kody z Google Authenticator do Keyhold jednym skanem i trzymaj zaszyfrowaną kopię na własnym Google Drive — zgubiony telefon nie odetnie Cię od kont.">
+<link rel="canonical" href="https://galusz.github.io/keyhold/pl/kopia-google-authenticator.html">
+<link rel="alternate" hreflang="en" href="https://galusz.github.io/keyhold/google-authenticator-backup.html">
+<link rel="alternate" hreflang="pl" href="https://galusz.github.io/keyhold/pl/kopia-google-authenticator.html">
+<link rel="alternate" hreflang="x-default" href="https://galusz.github.io/keyhold/google-authenticator-backup.html">
+<link rel="icon" href="../icon.svg">
+<link rel="stylesheet" href="/style.css">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Keyhold">
+<meta property="og:title" content="Kopia kodów z Google Authenticator">
+<meta property="og:description" content="Przenieś kody z Google Authenticator do Keyhold jednym skanem i trzymaj zaszyfrowaną kopię na własnym Google Drive — zgubiony telefon nie odetnie Cię od kont.">
+<meta property="og:url" content="https://galusz.github.io/keyhold/pl/kopia-google-authenticator.html">
+<meta property="og:image" content="https://galusz.github.io/keyhold/og.png">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+<body>
+<main>
+<header><img src="../icon.svg" alt=""><a href="../">Keyhold</a></header>
+
+<h1>Kopia kodów z Google Authenticator</h1>
+<p>Gdy telefon z aplikacją do kodów zginie albo się zepsuje, kody znikają razem z nim — a każde konto z weryfikacją dwuetapową trzeba potem odzyskiwać osobno. Keyhold trzyma te same kody w zaszyfrowanym sejfie, z kopią na Twoim własnym Google Drive.</p>
+
+<h2>Przenieś kody</h2>
+<ol>
+<li><strong>Zainstaluj Keyhold</strong> — na Androida z Google Play, na Windows z GitHuba — i załóż sejf z hasłem głównym. Wydrukuj kartę ratunkową.</li>
+<li><strong>W Google Authenticator</strong> otwórz menu → <em>Przenieś konta</em> → <em>Eksportuj konta</em>, wybierz konta i przejdź dalej. Pojawi się jeden lub kilka kodów QR.</li>
+<li><strong>Zeskanuj je Keyholdem.</strong> Keyhold nie skieruje aparatu na ekran własnego telefonu, więc użyj drugiego urządzenia: Keyhold na innym telefonie (<em>+</em> → <em>Zeskanuj kod QR</em> → <em>Skanuj aparatem</em>) albo Keyhold na komputerze ze zdjęciem kodu QR (<em>Otwórz obraz</em>). Google Authenticator może nie pozwalać na zrzut tego ekranu.</li>
+<li><strong>Wybierz <em>Zapisz wszystkie</em>.</strong> Każde konto staje się osobnym kodem w sejfie.</li>
+</ol>
+<p>Kody dalej działają też w Google Authenticator — eksport niczego nie wyłącza. Usuń je stamtąd dopiero wtedy, gdy będziesz gotów.</p>
+
+<h2>Trzymaj kopię</h2>
+<ul>
+<li><strong>Google Drive:</strong> włącz go w ustawieniach Keyhold. Sejf jest szyfrowany na urządzeniu, zanim zostanie wysłany, trafia do widocznego folderu Keyhold, a Keyhold ma dostęp tylko do plików, które sam założył.</li>
+<li><strong>Foldery albo własny serwer:</strong> każda zmiana może też trafiać tam, w siedmiu kopiach od najnowszej do sprzed mniej więcej roku.</li>
+<li><strong>Klucz ratunkowy</strong> z wydrukowanej karty otworzy sejf nawet wtedy, gdy hasło główne wypadnie z głowy.</li>
+</ul>
+
+<h2>Inne aplikacje do kodów</h2>
+<p>Keyhold importuje też z Aegis, 2FAS, andOTP i FreeOTP+. Microsoft Authenticator nie pozwala eksportować kodów — wyłącz i ponownie włącz weryfikację dwuetapową na każdej stronie i zeskanuj nowy kod do Keyhold.</p>
+
+<div class="buttons">
+<a class="btn" href="https://github.com/Galusz/keyhold/releases/latest">Pobierz na Windows</a>
+<a class="btn secondary" href="https://play.google.com/store/apps/details?id=pl.zkv.keyhold">Pobierz z Google Play</a>
+</div>
+
+<h2>Inne poradniki</h2>
+<ul><li><a href="kody-2fa-na-komputerze.html">Kody 2FA na komputerze z Windows</a></li><li><a href="keepass-z-kodami-2fa.html">Jak KeePass, tylko z kodami 2FA</a></li></ul>
+<p class="small"><a href="../google-authenticator-backup.html" hreflang="en">In English</a></p>
+
+<footer><a href="../security.html">Bezpieczeństwo (EN)</a><a href="../privacy.html">Polityka prywatności (EN)</a><a href="https://github.com/Galusz/keyhold">Kod źródłowy</a><a href="https://github.com/Galusz/keyhold/issues">Kontakt</a></footer>
+</main>
+</body>
+</html>
